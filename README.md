@@ -19,3 +19,7 @@ This is a web application designed to help hospital staff and patients better un
 - JavaScript for client-side interactions
 - PHP (server-side) for data processing
 - PostgreSQL for database management
+
+### Past Course Assignments
+- **Assignment 1: [Link to A1 Repository](https://github.com/fayy-lee/portfolio)**
+- **Assignment 2 and Assignment 3: [Link to A2 and A3 Repository (A2 is under versions)](https://github.com/fayy-lee/yatzygame)**
