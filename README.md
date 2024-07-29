@@ -34,15 +34,20 @@ This is a web application designed to help hospital staff and patients better un
    git clone https://github.com/fayy-lee/hospital-triage-app
 
 2. **Set up Database**
-- Navigate to the sql directory: cd hospital-triage-app/sql
-- Create the database and tables by running the SQL script: psql -U your_postgres_user -f create_db.sql
+- Navigate to the sql directory: 
+    ```bash
+    cd hospital-triage-app/sql
+- Create the database and tables by running the SQL script: 
+    ```bash
+    psql -U your_postgres_user -f create_db.sql
 
 3. **Configure Database Connection**
 - Open db_config.php and update the database credentials:
-$host = 'localhost';
-$dbname = 'hospital_triage';
-$user = 'your_username';
-$pass = 'your_password';
+    ```bash
+    $host = 'localhost';
+    $dbname = 'hospital_triage';
+    $user = 'your_username';
+    $pass = 'your_password';
 
 4. **Place Files in Web Server Directory**
 - Copy the project files to your web server's root directory (htdocs for XAMPP or www for WAMP).
