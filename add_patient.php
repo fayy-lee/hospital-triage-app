@@ -1,5 +1,4 @@
 <?php
-
 require 'db_config.php';
 
 // Check if form data is submitted

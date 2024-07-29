@@ -1,5 +1,4 @@
 <?php
-
 $host = 'localhost';
 $dbname = 'hospital_triage';
 $user = 'your_username';
