@@ -1,14 +1,14 @@
--- Create the database
-CREATE DATABASE hospital_triage;
+-- create_db.sql
 
--- Connect to the database
-\c hospital_triage;
-
--- Create the patients table
 CREATE TABLE patients (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    severity VARCHAR(10) NOT NULL,
-    code VARCHAR(3) NOT NULL,
-    arrival_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    name VARCHAR(255) NOT NULL,
+    code CHAR(3) NOT NULL,
+    severity INTEGER NOT NULL,
+    wait_time VARCHAR(255)
 );
+
+-- Insert some sample data
+INSERT INTO patients (name, code, severity, wait_time) VALUES
+('John Doe', 'ABC', 1, '30 minutes'),
+('Jane Smith', 'XYZ', 2, '45 minutes');

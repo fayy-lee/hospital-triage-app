@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const adminForm = document.getElementById('admin-form');
     const waitTimeDisplay = document.getElementById('wait-time');
 
+    // Handle patient form submission
     patientForm.addEventListener('submit', function(event) {
         event.preventDefault();
         
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle admin form submission
     adminForm.addEventListener('submit', function(event) {
         event.preventDefault();
 

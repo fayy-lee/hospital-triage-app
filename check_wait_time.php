@@ -1,25 +1,27 @@
 <?php
+
 require 'db_config.php';
 
+// Check if form data is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
-    $code = strtoupper($_POST['code']);
+    $code = $_POST['code'];
 
-    try {
-        $stmt = $pdo->prepare("SELECT * FROM patients WHERE name = :name AND code = :code");
-        $stmt->execute(['name' => $name, 'code' => $code]);
-        $patient = $stmt->fetch(PDO::FETCH_ASSOC);
+    // Prepare and execute the SQL query to fetch the wait time
+    $query = 'SELECT wait_time FROM patients WHERE name = :name AND code = :code';
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':code', $code);
 
-        if ($patient) {
-            $arrivalTime = new DateTime($patient['arrival_time']);
-            $now = new DateTime();
-            $waitTime = $now->diff($arrivalTime)->i; // Difference in minutes
-            echo "Approximate wait time for $name ($code): $waitTime minutes";
-        } else {
-            echo "Patient not found";
-        }
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+    $stmt->execute();
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($result) {
+        echo 'Approximate wait time: ' . $result['wait_time'];
+    } else {
+        echo 'No wait time found for the given patient details.';
     }
+} else {
+    echo 'Invalid request method.';
 }
 ?>

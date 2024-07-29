@@ -3,46 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Triage</title>
+    <title>Hospital Triage Application & Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Hospital Triage Application</h1>
+        <h1>Hospital Triage Application & Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About the Application</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section id="admin">
-            <h2>Administrator Panel</h2>
-            <form id="admin-form" action="add_patient.php" method="POST">
-                <label for="patient-name">Patient Name:</label>
-                <input type="text" id="patient-name" name="patient-name" required>
-                
-                <label for="severity">Severity of Injury:</label>
-                <select id="severity" name="severity" required>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-                
-                <button type="submit">Add Patient</button>
-            </form>
-        </section>
-        <section id="patient">
-            <h2>Patient Portal</h2>
-            <form id="patient-form" action="check_wait_time.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="code">3-Letter Code:</label>
-                <input type="text" id="code" name="code" maxlength="3" required>
-                
-                <button type="submit">Check Wait Time</button>
-            </form>
-            <div id="wait-time">
-                <!-- Wait time will be displayed here -->
-            </div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+    <section id="about">
+        <h2>About the Application</h2>
+        <p>This web application helps hospital staff and patients understand wait times in the emergency room. It includes an administrator panel for managing patient information and a patient portal for checking approximate wait times.</p>
+    </section>
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Administrator panel for adding and managing patients.</li>
+            <li>Patient portal for checking wait times based on name and code.</li>
+            <li>Real-time updates for patient information and wait times.</li>
+        </ul>
+    </section>
+    <section id="usage">
+        <h2>Usage Instructions</h2>
+        <h3>Admin Perspective</h3>
+        <p>Admins can add patients through the Administrator Panel and view the list of patients in the database.</p>
+        <h3>Patient Perspective</h3>
+        <p>Patients can check their approximate wait time using the Patient Portal by entering their name and 3-letter code.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>For more information, please reach out via the contact details below:</p>
+        <p>Phone: <a href="tel:+16475023168">+1 (647) 502-3168</a></p>
+        <p>Email: <a href="mailto:flee081@uottawa.ca">flee081@uottawa.ca</a></p>
+    </section>
+    <section id="portfolio">
+        <h2>My Portfolio</h2>
+        <p>Explore my projects and achievements at my <a href="https://github.com/fayy-lee" target="_blank">GitHub profile</a>.</p>
+        <ul>
+            <li>
+                <strong>Hotel Management System</strong> | Java, HTML, CSS, SQL | Apr 2024
+                <ul>
+                    <li>Developed an e-hotel application with database functionality for administrative tasks.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Healthcare Appointment Management System</strong> | Java, Android Studio | Dec 2023
+                <ul>
+                    <li>Created an Android app for healthcare appointment scheduling and management.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>myFirstFinance</strong> | React, Next.js, JavaScript, CSS | Jan 2023
+                <ul>
+                    <li>Developed a full-stack web application for financial resource information.</li>
+                    <a href="https://github.com/fayy-lee/sunlife-app" target="_blank">GitHub Repository</a>
+                </ul>
+            </li>
+        </ul>
+    </section>
 </body>
 </html>

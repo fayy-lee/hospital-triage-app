@@ -1,64 +1,62 @@
+/* Body Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 1em 0;
 }
 
-main {
-    padding: 1em;
-    max-width: 800px;
-    margin: 0 auto;
+header h1 {
+    margin: 0;
 }
 
-section {
-    background-color: white;
-    margin: 1em 0;
-    padding: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label, input, select, button {
-    margin: 0.5em 0;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.5em;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-#patient-list {
-    margin-top: 1em;
-}
-
-ul {
-    list-style: none;
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-li {
-    background-color: #f9f9f9;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    border: 1px solid #ddd;
+nav ul li {
+    display: inline;
+    margin: 0 10px; /* Adjust this value to increase or decrease spacing */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #333;
+}
+
+section p {
+    color: #666;
+}
+
+/* Link Styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
