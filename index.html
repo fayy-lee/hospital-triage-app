@@ -1,73 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hospital Triage Application & Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="add_patient.js"></script>
+    <script defer src="admin_login.js"></script>
+    <script defer src="patient_list.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Hospital Triage Application & Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About the Application</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#usage">Usage</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-            </ul>
-        </nav>
+      <h1>Hospital Triage Application & Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About the Application</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#usage">Usage</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </nav>
     </header>
+
     <section id="about">
-        <h2>About the Application</h2>
-        <p>This web application helps hospital staff and patients understand wait times in the emergency room. It includes an administrator panel for managing patient information and a patient portal for checking approximate wait times.</p>
+      <h2>About the Application</h2>
+      <p>
+        This web application helps hospital staff and patients understand wait
+        times in the emergency room. It includes an administrator panel for
+        managing patient information and a patient portal for checking
+        approximate wait times.
+      </p>
     </section>
+
     <section id="features">
-        <h2>Features</h2>
-        <ul>
-            <li>Administrator panel for adding and managing patients.</li>
-            <li>Patient portal for checking wait times based on name and code.</li>
-            <li>Real-time updates for patient information and wait times.</li>
-        </ul>
+      <h2>Features</h2>
+      <ul>
+        <li>Administrator panel for adding and managing patients.</li>
+        <li>Patient portal for checking wait times based on name and code.</li>
+        <li>Real-time updates for patient information and wait times.</li>
+      </ul>
     </section>
+
     <section id="usage">
-        <h2>Usage Instructions</h2>
-        <h3>Admin Perspective</h3>
-        <p>Admins can add patients through the Administrator Panel and view the list of patients in the database.</p>
-        <h3>Patient Perspective</h3>
-        <p>Patients can check their approximate wait time using the Patient Portal by entering their name and 3-letter code.</p>
+      <h2>Usage Instructions</h2>
+      <h3>Admin Perspective</h3>
+      <p>
+        Admins can add patients through the Administrator Panel and view the
+        list of patients in the database.
+      </p>
+      <div id="admin-login">
+        <h2>Admin Login</h2>
+        <form id="admin-login-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit">Login</button>
+        </form>
+        <div id="admin-login-message"></div>
+      </div>
+      <div id="add-patient">
+        <h2>Add Patient</h2>
+        <form id="add-patient-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="code">Code:</label>
+          <input type="text" id="code" name="code" required />
+          <label for="severity">Severity:</label>
+          <input type="number" id="severity" name="severity" required />
+          <label for="wait_time">Wait Time:</label>
+          <input type="number" id="wait_time" name="wait_time" required />
+          <button type="submit">Add Patient</button>
+        </form>
+        <div id="add-patient-message"></div>
+      </div>
+      <div id="patient-list">
+        <h2>Patient List</h2>
+        <div id="patients"></div>
+      </div>
     </section>
+
+    <section id="usage">
+      <h2>Usage Instructions</h2>
+      <h3>Patient Perspective</h3>
+      <p>
+        Patients can check their approximate wait time using the Patient Portal
+        by entering their name and 3-letter code.
+      </p>
+      <div id="patient-portal">
+        <h2>Patient Portal</h2>
+        <form id="patient-portal-form">
+          <label for="patient-name">Name:</label>
+          <input type="text" id="patient-name" name="name" required />
+          <label for="patient-code">Code:</label>
+          <input type="text" id="patient-code" name="code" required />
+          <button type="submit">Check Wait Time</button>
+        </form>
+        <div id="wait-time-message"></div>
+      </div>
+    </section>
+
     <section id="contact">
-        <h2>Contact</h2>
-        <p>For more information, please reach out via the contact details below:</p>
-        <p>Phone: <a href="tel:+16475023168">+1 (647) 502-3168</a></p>
-        <p>Email: <a href="mailto:flee081@uottawa.ca">flee081@uottawa.ca</a></p>
+      <h2>Contact</h2>
+      <p>
+        For more information, please reach out via the contact details below:
+      </p>
+      <p>Phone: <a href="tel:+16475023168">+1 (647) 502-3168</a></p>
+      <p>Email: <a href="mailto:flee081@uottawa.ca">flee081@uottawa.ca</a></p>
     </section>
+
     <section id="portfolio">
-        <h2>My Portfolio</h2>
-        <p>Explore my projects and achievements at my <a href="https://github.com/fayy-lee" target="_blank">GitHub profile</a>.</p>
-        <ul>
+      <h2>My Portfolio</h2>
+      <p>
+        Explore my projects and achievements at my
+        <a href="https://github.com/fayy-lee" target="_blank">GitHub profile</a
+        >.
+      </p>
+      <ul>
+        <li>
+          <strong>Hotel Management System</strong> | Java, HTML, CSS, SQL | Apr
+          2024
+          <ul>
             <li>
-                <strong>Hotel Management System</strong> | Java, HTML, CSS, SQL | Apr 2024
-                <ul>
-                    <li>Developed an e-hotel application with database functionality for administrative tasks.</li>
-                </ul>
+              Developed an e-hotel application with database functionality for
+              administrative tasks.
             </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Healthcare Appointment Management System</strong> | Java,
+          Android Studio | Dec 2023
+          <ul>
             <li>
-                <strong>Healthcare Appointment Management System</strong> | Java, Android Studio | Dec 2023
-                <ul>
-                    <li>Created an Android app for healthcare appointment scheduling and management.</li>
-                </ul>
+              Created an Android app for healthcare appointment scheduling and
+              management.
             </li>
+          </ul>
+        </li>
+        <li>
+          <strong>myFirstFinance</strong> | React, Next.js, JavaScript, CSS |
+          Jan 2023
+          <ul>
             <li>
-                <strong>myFirstFinance</strong> | React, Next.js, JavaScript, CSS | Jan 2023
-                <ul>
-                    <li>Developed a full-stack web application for financial resource information.</li>
-                    <a href="https://github.com/fayy-lee/sunlife-app" target="_blank">GitHub Repository</a>
-                </ul>
+              Developed a full-stack web application for financial resource
+              information.
             </li>
-        </ul>
+            <a href="https://github.com/fayy-lee/sunlife-app" target="_blank"
+              >GitHub Repository</a
+            >
+          </ul>
+        </li>
+      </ul>
     </section>
-</body>
+  </body>
 </html>

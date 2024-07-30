@@ -1,62 +1,209 @@
 /* Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
 }
 
 /* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 header h1 {
-    margin: 0;
+  margin: 0;
 }
 
 /* Navigation Styles */
 nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px; /* Adjust this value to increase or decrease spacing */
+  display: inline;
+  margin: 0 10px; /* Adjust this value to increase or decrease spacing */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Section Styles */
 section {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-    color: #333;
+  color: #333;
 }
 
 section p {
-    color: #666;
+  color: #666;
+}
+
+/* Admin Login Styles */
+#admin-login {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#admin-login form {
+  display: flex;
+  flex-direction: column;
+}
+
+#admin-login label {
+  margin-bottom: 5px;
+}
+
+#admin-login input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#admin-login button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#admin-login button:hover {
+  background-color: #0056b3;
+}
+
+/* Add Patient Styles */
+#add-patient {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#add-patient form {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-patient label {
+  margin-bottom: 5px;
+}
+
+#add-patient input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-patient button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+
+#add-patient button:hover {
+  background-color: #218838;
+}
+
+/* Patient List Styles */
+#patient-list {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.patient {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Patient Portal Styles */
+#patient-portal {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#patient-portal form {
+  display: flex;
+  flex-direction: column;
+}
+
+#patient-portal label {
+  margin-bottom: 5px;
+}
+
+#patient-portal input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#patient-portal button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#patient-portal button:hover {
+  background-color: #0056b3;
+}
+
+/* Portfolio Styles */
+#portfolio ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#portfolio ul li {
+  margin: 10px 0;
+}
+
+#portfolio a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#portfolio a:hover {
+  text-decoration: underline;
 }
 
 /* Link Styles */
 a {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+/* Messages */
+#admin-login-message,
+#add-patient-message,
+#wait-time-message {
+  text-align: center;
+  margin-top: 10px;
 }
