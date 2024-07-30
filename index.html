@@ -154,4 +154,80 @@
       </ul>
     </section>
   </body>
+  <script>
+    // Handle Admin Login
+    document
+      .getElementById("admin-login-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var formData = new FormData(this);
+
+        fetch("admin_login.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            // Display the response message
+            document.getElementById("admin-login-message").innerText = data;
+          })
+          .catch((error) => console.error("Error:", error));
+      });
+
+    // Handle Add Patient
+    document
+      .getElementById("add-patient-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var formData = new FormData(this);
+
+        fetch("add_patient.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            // Display the response message
+            document.getElementById("add-patient-message").innerText = data;
+            // Optionally, update patient list
+            fetchPatientList();
+          })
+          .catch((error) => console.error("Error:", error));
+      });
+
+    // Handle Patient Portal
+    document
+      .getElementById("patient-portal-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var formData = new FormData(this);
+
+        fetch("check_wait_time.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            // Display the wait time message
+            document.getElementById("wait-time-message").innerText = data;
+          })
+          .catch((error) => console.error("Error:", error));
+      });
+
+    // Function to fetch and display patient list
+    function fetchPatientList() {
+      fetch("get_patients.php")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("patients").innerHTML = data;
+        })
+        .catch((error) => console.error("Error:", error));
+    }
+
+    // Fetch patient list on page load
+    document.addEventListener("DOMContentLoaded", fetchPatientList);
+  </script>
 </html>
