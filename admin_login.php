@@ -1,4 +1,5 @@
 <?php
+session_start(); // Start the session
 require 'db_config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -14,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Check if admin exists and password matches
     if ($admin && $password === $admin['password']) {
+        $_SESSION['admin_logged_in'] = true; // Set session variable
         echo 'Login successful!';
-        // Set session variables or redirect if needed
     } else {
         echo 'Invalid username or password.';
     }
@@ -23,3 +24,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo 'Invalid request method.';
 }
 ?>
+
